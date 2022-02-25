@@ -1,5 +1,4 @@
-﻿using cSharpIntroWinForms.Ispit190073;
-using cSharpIntroWinForms.P10;
+﻿using cSharpIntroWinForms.P10;
 using cSharpIntroWinForms.P8;
 using System;
 using System.Collections.Generic;
@@ -25,21 +24,14 @@ namespace cSharpIntroWinForms
         public virtual Spolovi Spol { get; set; }
         //public string Spol { get; set; }
         public bool Admin { get; set; }
+
         public List<PolozeniPredmet> Polozeni { get; set; } = new List<PolozeniPredmet>();
         public virtual List<KorisniciPredmeti> Uspjeh { get; set; } = new List<KorisniciPredmeti>();
-        public virtual List<KorisniciPoruke190073> ListaPoruka { get; set; } = new List<KorisniciPoruke190073>();
 
 
-        public override string ToString() => Ime + " " + Prezime;
-
-        public double IzracunajProsjek()
+        public override string ToString()
         {
-            double prosjek = 0;
-            if (Uspjeh.Count() == 0)
-                return prosjek;
-            foreach (var polozeni in Uspjeh)
-                prosjek += polozeni.Ocjena;
-            return prosjek / Uspjeh.Count();
+            return $"{Ime} {Prezime} ({KorisnickoIme})";
         }
     }
 }

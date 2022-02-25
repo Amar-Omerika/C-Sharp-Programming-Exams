@@ -30,15 +30,33 @@ namespace DLWMS.WinForms.Izvjestaji
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ScanReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsDLWMS = new DLWMS.WinForms.Izvjestaji.dsDLWMS();
             this.PorukeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            ((System.ComponentModel.ISupportInitialize)(this.ScanReportBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDLWMS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PorukeBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ScanReportBindingSource
+            // 
+            this.ScanReportBindingSource.DataMember = "ScanReport";
+            this.ScanReportBindingSource.DataSource = this.dsDLWMS;
+            // 
+            // dsDLWMS
+            // 
+            this.dsDLWMS.DataSetName = "dsDLWMS";
+            this.dsDLWMS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DLWMS.WinForms.Izvjestaji.rptSkenovi.rdlc";
+            reportDataSource1.Name = "dsScanReport";
+            reportDataSource1.Value = this.ScanReportBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DLWMS.WinForms.IspitIB190069.rptScanReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
@@ -57,6 +75,8 @@ namespace DLWMS.WinForms.Izvjestaji
             this.Name = "frmIzvjestaji";
             this.Text = "frmIzvjestaji";
             this.Load += new System.EventHandler(this.frmIzvjestaji_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ScanReportBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDLWMS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PorukeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -66,5 +86,7 @@ namespace DLWMS.WinForms.Izvjestaji
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource PorukeBindingSource;
+        private System.Windows.Forms.BindingSource ScanReportBindingSource;
+        private dsDLWMS dsDLWMS;
     }
 }

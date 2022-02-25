@@ -1,4 +1,4 @@
-﻿using cSharpIntroWinForms.IB190073;
+﻿using cSharpIntroWinForms.IspitIB190069;
 using cSharpIntroWinForms.P10;
 using System;
 using System.Collections.Generic;
@@ -29,6 +29,7 @@ namespace cSharpIntroWinForms.P9
         public DbSet<Spolovi> Spolovi { get; set; }
         public DbSet<Predmeti> Predmeti { get; set; }
         public DbSet<KorisniciPredmeti> KorisniciPredmeti { get; set; }
+        //Nova klasa
         public DbSet<KorisniciSlike> KorisniciSlike { get; set; }
 
 

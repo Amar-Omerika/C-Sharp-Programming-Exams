@@ -77,30 +77,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IB190073\dsKorisnikIzvjestaja.Designer.cs">
+    <Compile Include="IspitIB190069\dsIzvjestaj.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsKorisnikIzvjestaja.xsd</DependentUpon>
+      <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
     </Compile>
-    <Compile Include="IB190073\frmIzvjestaj.cs">
+    <Compile Include="IspitIB190069\frmGlavna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IB190073\frmIzvjestaj.Designer.cs">
-      <DependentUpon>frmIzvjestaj.cs</DependentUpon>
+    <Compile Include="IspitIB190069\frmGlavna.Designer.cs">
+      <DependentUpon>frmGlavna.cs</DependentUpon>
     </Compile>
-    <Compile Include="IB190073\Glavna.cs">
+    <Compile Include="IspitIB190069\frmGodineStudija.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IB190073\Glavna.Designer.cs">
-      <DependentUpon>Glavna.cs</DependentUpon>
+    <Compile Include="IspitIB190069\frmGodineStudija.Designer.cs">
+      <DependentUpon>frmGodineStudija.cs</DependentUpon>
     </Compile>
-    <Compile Include="IB190073\GodineStudija.cs" />
-    <Compile Include="IB190073\GodineStudijaForm.cs">
+    <Compile Include="IspitIB190069\frmPrintaj.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IB190073\GodineStudijaForm.Designer.cs">
-      <DependentUpon>GodineStudijaForm.cs</DependentUpon>
+    <Compile Include="IspitIB190069\frmPrintaj.Designer.cs">
+      <DependentUpon>frmPrintaj.cs</DependentUpon>
     </Compile>
+    <Compile Include="IspitIB190069\GodineStudija.cs" />
     <Compile Include="P10\DLWMS.cs" />
     <Compile Include="P10\KorisniciPredmeti.cs" />
     <Compile Include="P10\MboxHelper.cs" />
@@ -139,16 +139,16 @@
     <Compile Include="P9\KonekcijaNaBazu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="IB190073\frmIzvjestaj.resx">
-      <DependentUpon>frmIzvjestaj.cs</DependentUpon>
+    <EmbeddedResource Include="IspitIB190069\frmGlavna.resx">
+      <DependentUpon>frmGlavna.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IB190073\Glavna.resx">
-      <DependentUpon>Glavna.cs</DependentUpon>
+    <EmbeddedResource Include="IspitIB190069\frmGodineStudija.resx">
+      <DependentUpon>frmGodineStudija.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IB190073\GodineStudijaForm.resx">
-      <DependentUpon>GodineStudijaForm.cs</DependentUpon>
+    <EmbeddedResource Include="IspitIB190069\frmPrintaj.resx">
+      <DependentUpon>frmPrintaj.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IB190073\rptIzvjestajKorisnika.rdlc" />
+    <EmbeddedResource Include="IspitIB190069\rptPrintaj.rdlc" />
     <EmbeddedResource Include="P6\KorisniciAdmin.resx">
       <DependentUpon>KorisniciAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,16 +174,16 @@
     <None Include="DLWMS.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="IB190073\dsKorisnikIzvjestaja.xsc">
-      <DependentUpon>dsKorisnikIzvjestaja.xsd</DependentUpon>
+    <None Include="IspitIB190069\dsIzvjestaj.xsc">
+      <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
     </None>
-    <None Include="IB190073\dsKorisnikIzvjestaja.xsd">
+    <None Include="IspitIB190069\dsIzvjestaj.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsKorisnikIzvjestaja.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsIzvjestaj.Designer.cs</LastGenOutput>
     </None>
-    <None Include="IB190073\dsKorisnikIzvjestaja.xss">
-      <DependentUpon>dsKorisnikIzvjestaja.xsd</DependentUpon>
+    <None Include="IspitIB190069\dsIzvjestaj.xss">
+      <DependentUpon>dsIzvjestaj.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\cSharpIntroWinForms.P8.KorisniciPolozeniPredmeti.datasource" />

@@ -1,4 +1,4 @@
-﻿using cSharpIntroWinForms.IB190073;
+﻿using cSharpIntroWinForms.IspitIB190069;
 using cSharpIntroWinForms.P10;
 using cSharpIntroWinForms.P9;
 using System;
@@ -15,109 +15,83 @@ namespace cSharpIntroWinForms.P8
 {
     public partial class KorisniciPolozeniPredmeti : Form
     {
-        private Korisnik korisnik;
-        KonekcijaNaBazu konekcijaNaBazu = DLWMS.DB;
-        private List<int> ListaOcjena = new List<int>();
+         Korisnik korisnik;
+        KonekcijaNaBazu _db = DLWMS.DB;
 
         public KorisniciPolozeniPredmeti()
         {
             InitializeComponent();
             dgvPolozeniPredmeti.AutoGenerateColumns = false;
-            korisnik = konekcijaNaBazu.Korisnici.FirstOrDefault();
+            korisnik = _db.Korisnici.FirstOrDefault();
         }
         public KorisniciPolozeniPredmeti(Korisnik korisnik):this()
         {
             this.korisnik = korisnik;
         }
+
         private void KorisniciPolozeniPredmeti_Load(object sender, EventArgs e)
         {
             try
             {
-                UcitajGodineStudija();
+                UcitajSadrzaj();
                 UcitajPredmete();
-                UcitajPolozene();
+                UcitajGodine();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
-                MessageBox.Show($"{ex.Message} {ex.InnerException?.Message}");
+                MessageBox.Show($"{ex.Message}{Environment.NewLine}{ex.InnerException?.Message}");
             }
         }
 
-        private void UcitajGodineStudija()
+        private void UcitajGodine()
         {
-            cmbGodineStudija.DataSource = konekcijaNaBazu.GodineStudija.ToList();
+            cmbGodineStudija.DataSource = _db.GodineStudija.ToList();
             cmbGodineStudija.DisplayMember = "Naziv";
-            cmbGodineStudija.ValueMember = "Id";
-        }
-
-        private void UcitajPolozene()
-        {
-            dgvPolozeniPredmeti.DataSource = null;
-            dgvPolozeniPredmeti.DataSource = korisnik.Uspjeh;
+            cmbGodineStudija.ValueMember="Id";
         }
 
         private void UcitajPredmete()
         {
-            cmbPredmeti.DataSource = konekcijaNaBazu.Predmeti.ToList();
-            cmbPredmeti.DisplayMember = "Naziv";
-            cmbPredmeti.ValueMember = "Id";
+            cmbPredmeti.DataSource = _db.Predmeti.ToList();
+        }
+
+        private void UcitajSadrzaj()
+        {
+            dgvPolozeniPredmeti.DataSource = null;
+            dgvPolozeniPredmeti.DataSource = _db.KorisniciPredmeti.ToList();
         }
 
         private void btnDodajPolozeni_Click(object sender, EventArgs e)
         {
-            if(ValidirajUnos())
-            {
-                if (!PostojiPredmet())
-                {
-                    konekcijaNaBazu.KorisniciPredmeti.Add(new KorisniciPredmeti()
-                    {
-                        Korisnik = korisnik,
-                        Ocjena = int.Parse(txtOcjena.Text),
-                        Predmet = cmbPredmeti.SelectedItem as Predmeti,
-                        Datum = dtpDatumPolaganja.Value.ToShortDateString(),
-                        GodineStudija = cmbGodineStudija.SelectedItem as GodineStudija
-                    });
-                    konekcijaNaBazu.SaveChanges();
-                    MessageBox.Show($"Predmet uspjesno dodan!");
-                    UcitajPolozene();
-                }
-                else
-                 MessageBox.Show($"Predmet vec postoji na toj godini, ili podaci nisu validni!");
-            }
+            var predmet = cmbPredmeti.SelectedItem as Predmeti;
+            var godina = cmbGodineStudija.SelectedItem as GodineStudija;
 
-        }
-
-        private bool PostojiPredmet()
-        {
             foreach (var polozeni in korisnik.Uspjeh)
-                if (polozeni.GodineStudija.Id == (cmbGodineStudija.SelectedItem as GodineStudija).Id && polozeni.Predmet.Id == (cmbPredmeti.SelectedItem as Predmeti).Id)
-                    return true;
-            return false;
-        }
-
-        private bool ValidirajUnos()
-        {
-            return Validator.ObaveznoPolje(cmbPredmeti, err, Validator.porObaveznaVrijednost) &&
-                Validator.ObaveznoPolje(cmbGodineStudija, err, Validator.porObaveznaVrijednost)
-                && int.Parse(txtOcjena.Text) >= 6 && int.Parse(txtOcjena.Text) <= 10;
+            {
+                if (polozeni.Predmet.Naziv == predmet.Naziv && godina.Id == polozeni.GodineStudija.Id)
+                {
+                    err.SetError(btnDodajPolozeni, "Onemoguceno dodavanje istoimenih predmeta na istoj godini studija!");
+                    return;
+                }
+            }
+            var kp = new KorisniciPredmeti()
+            {
+                Korisnik = korisnik,
+                Datum = dtpDatumPolaganja.Value.ToString(),
+                Ocjena = int.Parse(txtOcjena.Text),
+                Predmet = predmet,
+                GodineStudija = godina
+            };
+            korisnik.Uspjeh.Add(kp);
+            _db.SaveChanges();
+            UcitajSadrzaj();
         }
 
         private void btnPrintajUvjerenje_Click(object sender, EventArgs e)
         {
-            dtoKorisnikIzvjestaj objekatIzvjestaj = new dtoKorisnikIzvjestaj();
-            objekatIzvjestaj.Ime = korisnik.Ime;
-            objekatIzvjestaj.Prezime = korisnik.Prezime;
-            objekatIzvjestaj.Polozeni = korisnik.Uspjeh;
-            frmIzvjestaj izvjestaj = new frmIzvjestaj(objekatIzvjestaj);
-            izvjestaj.ShowDialog();
+           
+            frmPrintaj frmPrintaj = new frmPrintaj(korisnik);
+            frmPrintaj.ShowDialog();
         }
-    }
-
-
-    public class dtoKorisnikIzvjestaj
-    {
-        public string Ime { get; set; }
-        public string Prezime { get; set; }
-        public List<KorisniciPredmeti> Polozeni { get; set; }
     }
 }

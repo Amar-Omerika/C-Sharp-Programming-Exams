@@ -65,7 +65,6 @@
             this.btnDodajPolozeni.TabIndex = 3;
             this.btnDodajPolozeni.Text = "Dodaj";
             this.btnDodajPolozeni.UseVisualStyleBackColor = true;
-            this.btnDodajPolozeni.Click += new System.EventHandler(this.btnDodajPolozeni_Click);
             // 
             // dgvPolozeniPredmeti
             // 
@@ -122,7 +121,7 @@
             this.cbUcitajNepolozene.TabIndex = 6;
             this.cbUcitajNepolozene.Text = "Učitaj nepoložene";
             this.cbUcitajNepolozene.UseVisualStyleBackColor = true;
-            this.cbUcitajNepolozene.CheckedChanged += new System.EventHandler(this.cbUcitajNepolozene_CheckedChanged);
+    
             // 
             // btnASYNC
             // 
@@ -132,7 +131,7 @@
             this.btnASYNC.TabIndex = 7;
             this.btnASYNC.Text = "Run ASYNC";
             this.btnASYNC.UseVisualStyleBackColor = true;
-            this.btnASYNC.Click += new System.EventHandler(this.btnASYNC_Click);
+
             // 
             // btnPrintajUvjerenje
             // 
@@ -142,7 +141,7 @@
             this.btnPrintajUvjerenje.TabIndex = 7;
             this.btnPrintajUvjerenje.Text = "Printaj uvjerenje";
             this.btnPrintajUvjerenje.UseVisualStyleBackColor = true;
-            this.btnPrintajUvjerenje.Click += new System.EventHandler(this.btnPrintajUvjerenje_Click);
+
             // 
             // KorisniciPolozeniPredmeti
             // 

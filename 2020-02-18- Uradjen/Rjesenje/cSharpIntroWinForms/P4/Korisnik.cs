@@ -27,6 +27,7 @@ namespace cSharpIntroWinForms
 
         public List<PolozeniPredmet> Polozeni { get; set; } = new List<PolozeniPredmet>();
         public virtual List<KorisniciPredmeti> Uspjeh { get; set; } = new List<KorisniciPredmeti>();
+      
 
 
         public override string ToString()

@@ -27,26 +27,25 @@ namespace cSharpIntroWinForms
         private void KorisniciAdmin_Load(object sender, EventArgs e)
         {
             LoadData();
+            txtPretraga.Select();
         }
-
-
 
         private void LoadData(List<Korisnik> korisnici = null)
         {
             try
             {
-                List<Korisnik> rezultati = korisnici ?? konekcijaNaBazu.Korisnici.ToList();
-
                 dgvKorisnici.DataSource = null;
-                dgvKorisnici.DataSource = rezultati;
-
+                dgvKorisnici.DataSource = korisnici ?? konekcijaNaBazu.Korisnici.ToList();
             }
             catch (Exception ex)
             {
-                MboxHelper.PrikaziGresku(ex);
+                MessageBox.Show(ex.Message + " " + ex.InnerException?.Message);
             }
         }
 
-
+        private void dgvKorisnici_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LoadData();
+        }
     }
 }

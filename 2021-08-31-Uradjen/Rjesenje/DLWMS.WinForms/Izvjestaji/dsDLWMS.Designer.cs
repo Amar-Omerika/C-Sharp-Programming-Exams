@@ -26,7 +26,7 @@ namespace DLWMS.WinForms.Izvjestaji {
         
         private PolozeniDataTable tablePolozeni;
         
-        private SkenDataTable tableSken;
+        private ScanReportDataTable tableScanReport;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -59,8 +59,8 @@ namespace DLWMS.WinForms.Izvjestaji {
                 if ((ds.Tables["Polozeni"] != null)) {
                     base.Tables.Add(new PolozeniDataTable(ds.Tables["Polozeni"]));
                 }
-                if ((ds.Tables["Sken"] != null)) {
-                    base.Tables.Add(new SkenDataTable(ds.Tables["Sken"]));
+                if ((ds.Tables["ScanReport"] != null)) {
+                    base.Tables.Add(new ScanReportDataTable(ds.Tables["ScanReport"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -94,9 +94,9 @@ namespace DLWMS.WinForms.Izvjestaji {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public SkenDataTable Sken {
+        public ScanReportDataTable ScanReport {
             get {
-                return this.tableSken;
+                return this.tableScanReport;
             }
         }
         
@@ -170,8 +170,8 @@ namespace DLWMS.WinForms.Izvjestaji {
                 if ((ds.Tables["Polozeni"] != null)) {
                     base.Tables.Add(new PolozeniDataTable(ds.Tables["Polozeni"]));
                 }
-                if ((ds.Tables["Sken"] != null)) {
-                    base.Tables.Add(new SkenDataTable(ds.Tables["Sken"]));
+                if ((ds.Tables["ScanReport"] != null)) {
+                    base.Tables.Add(new ScanReportDataTable(ds.Tables["ScanReport"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -212,10 +212,10 @@ namespace DLWMS.WinForms.Izvjestaji {
                     this.tablePolozeni.InitVars();
                 }
             }
-            this.tableSken = ((SkenDataTable)(base.Tables["Sken"]));
+            this.tableScanReport = ((ScanReportDataTable)(base.Tables["ScanReport"]));
             if ((initTable == true)) {
-                if ((this.tableSken != null)) {
-                    this.tableSken.InitVars();
+                if ((this.tableScanReport != null)) {
+                    this.tableScanReport.InitVars();
                 }
             }
         }
@@ -230,8 +230,8 @@ namespace DLWMS.WinForms.Izvjestaji {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablePolozeni = new PolozeniDataTable();
             base.Tables.Add(this.tablePolozeni);
-            this.tableSken = new SkenDataTable();
-            base.Tables.Add(this.tableSken);
+            this.tableScanReport = new ScanReportDataTable();
+            base.Tables.Add(this.tableScanReport);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -242,7 +242,7 @@ namespace DLWMS.WinForms.Izvjestaji {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeSken() {
+        private bool ShouldSerializeScanReport() {
             return false;
         }
         
@@ -305,7 +305,7 @@ namespace DLWMS.WinForms.Izvjestaji {
         public delegate void PolozeniRowChangeEventHandler(object sender, PolozeniRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void SkenRowChangeEventHandler(object sender, SkenRowChangeEvent e);
+        public delegate void ScanReportRowChangeEventHandler(object sender, ScanReportRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -601,7 +601,7 @@ namespace DLWMS.WinForms.Izvjestaji {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class SkenDataTable : global::System.Data.TypedTableBase<SkenRow> {
+        public partial class ScanReportDataTable : global::System.Data.TypedTableBase<ScanReportRow> {
             
             private global::System.Data.DataColumn columnPredmet;
             
@@ -611,8 +611,8 @@ namespace DLWMS.WinForms.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SkenDataTable() {
-                this.TableName = "Sken";
+            public ScanReportDataTable() {
+                this.TableName = "ScanReport";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -620,7 +620,7 @@ namespace DLWMS.WinForms.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SkenDataTable(global::System.Data.DataTable table) {
+            internal ScanReportDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -637,7 +637,7 @@ namespace DLWMS.WinForms.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected SkenDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ScanReportDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -677,47 +677,47 @@ namespace DLWMS.WinForms.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SkenRow this[int index] {
+            public ScanReportRow this[int index] {
                 get {
-                    return ((SkenRow)(this.Rows[index]));
+                    return ((ScanReportRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SkenRowChangeEventHandler SkenRowChanging;
+            public event ScanReportRowChangeEventHandler ScanReportRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SkenRowChangeEventHandler SkenRowChanged;
+            public event ScanReportRowChangeEventHandler ScanReportRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SkenRowChangeEventHandler SkenRowDeleting;
+            public event ScanReportRowChangeEventHandler ScanReportRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event SkenRowChangeEventHandler SkenRowDeleted;
+            public event ScanReportRowChangeEventHandler ScanReportRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddSkenRow(SkenRow row) {
+            public void AddScanReportRow(ScanReportRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SkenRow AddSkenRow(string Predmet, string Napomena, string Varanje) {
-                SkenRow rowSkenRow = ((SkenRow)(this.NewRow()));
+            public ScanReportRow AddScanReportRow(string Predmet, string Napomena, string Varanje) {
+                ScanReportRow rowScanReportRow = ((ScanReportRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Predmet,
                         Napomena,
                         Varanje};
-                rowSkenRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowSkenRow);
-                return rowSkenRow;
+                rowScanReportRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowScanReportRow);
+                return rowScanReportRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                SkenDataTable cln = ((SkenDataTable)(base.Clone()));
+                ScanReportDataTable cln = ((ScanReportDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -725,7 +725,7 @@ namespace DLWMS.WinForms.Izvjestaji {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new SkenDataTable();
+                return new ScanReportDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -749,28 +749,28 @@ namespace DLWMS.WinForms.Izvjestaji {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SkenRow NewSkenRow() {
-                return ((SkenRow)(this.NewRow()));
+            public ScanReportRow NewScanReportRow() {
+                return ((ScanReportRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new SkenRow(builder);
+                return new ScanReportRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(SkenRow);
+                return typeof(ScanReportRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.SkenRowChanged != null)) {
-                    this.SkenRowChanged(this, new SkenRowChangeEvent(((SkenRow)(e.Row)), e.Action));
+                if ((this.ScanReportRowChanged != null)) {
+                    this.ScanReportRowChanged(this, new ScanReportRowChangeEvent(((ScanReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -778,8 +778,8 @@ namespace DLWMS.WinForms.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.SkenRowChanging != null)) {
-                    this.SkenRowChanging(this, new SkenRowChangeEvent(((SkenRow)(e.Row)), e.Action));
+                if ((this.ScanReportRowChanging != null)) {
+                    this.ScanReportRowChanging(this, new ScanReportRowChangeEvent(((ScanReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -787,8 +787,8 @@ namespace DLWMS.WinForms.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.SkenRowDeleted != null)) {
-                    this.SkenRowDeleted(this, new SkenRowChangeEvent(((SkenRow)(e.Row)), e.Action));
+                if ((this.ScanReportRowDeleted != null)) {
+                    this.ScanReportRowDeleted(this, new ScanReportRowChangeEvent(((ScanReportRow)(e.Row)), e.Action));
                 }
             }
             
@@ -796,14 +796,14 @@ namespace DLWMS.WinForms.Izvjestaji {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.SkenRowDeleting != null)) {
-                    this.SkenRowDeleting(this, new SkenRowChangeEvent(((SkenRow)(e.Row)), e.Action));
+                if ((this.ScanReportRowDeleting != null)) {
+                    this.ScanReportRowDeleting(this, new ScanReportRowChangeEvent(((ScanReportRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveSkenRow(SkenRow row) {
+            public void RemoveScanReportRow(ScanReportRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -830,7 +830,7 @@ namespace DLWMS.WinForms.Izvjestaji {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "SkenDataTable";
+                attribute2.FixedValue = "ScanReportDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1001,15 +1001,15 @@ namespace DLWMS.WinForms.Izvjestaji {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class SkenRow : global::System.Data.DataRow {
+        public partial class ScanReportRow : global::System.Data.DataRow {
             
-            private SkenDataTable tableSken;
+            private ScanReportDataTable tableScanReport;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal SkenRow(global::System.Data.DataRowBuilder rb) : 
+            internal ScanReportRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableSken = ((SkenDataTable)(this.Table));
+                this.tableScanReport = ((ScanReportDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1017,14 +1017,14 @@ namespace DLWMS.WinForms.Izvjestaji {
             public string Predmet {
                 get {
                     try {
-                        return ((string)(this[this.tableSken.PredmetColumn]));
+                        return ((string)(this[this.tableScanReport.PredmetColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Predmet\' in table \'Sken\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Predmet\' in table \'ScanReport\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSken.PredmetColumn] = value;
+                    this[this.tableScanReport.PredmetColumn] = value;
                 }
             }
             
@@ -1033,14 +1033,14 @@ namespace DLWMS.WinForms.Izvjestaji {
             public string Napomena {
                 get {
                     try {
-                        return ((string)(this[this.tableSken.NapomenaColumn]));
+                        return ((string)(this[this.tableScanReport.NapomenaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Napomena\' in table \'Sken\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Napomena\' in table \'ScanReport\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSken.NapomenaColumn] = value;
+                    this[this.tableScanReport.NapomenaColumn] = value;
                 }
             }
             
@@ -1049,51 +1049,51 @@ namespace DLWMS.WinForms.Izvjestaji {
             public string Varanje {
                 get {
                     try {
-                        return ((string)(this[this.tableSken.VaranjeColumn]));
+                        return ((string)(this[this.tableScanReport.VaranjeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Varanje\' in table \'Sken\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Varanje\' in table \'ScanReport\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableSken.VaranjeColumn] = value;
+                    this[this.tableScanReport.VaranjeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsPredmetNull() {
-                return this.IsNull(this.tableSken.PredmetColumn);
+                return this.IsNull(this.tableScanReport.PredmetColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetPredmetNull() {
-                this[this.tableSken.PredmetColumn] = global::System.Convert.DBNull;
+                this[this.tableScanReport.PredmetColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsNapomenaNull() {
-                return this.IsNull(this.tableSken.NapomenaColumn);
+                return this.IsNull(this.tableScanReport.NapomenaColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetNapomenaNull() {
-                this[this.tableSken.NapomenaColumn] = global::System.Convert.DBNull;
+                this[this.tableScanReport.NapomenaColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsVaranjeNull() {
-                return this.IsNull(this.tableSken.VaranjeColumn);
+                return this.IsNull(this.tableScanReport.VaranjeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetVaranjeNull() {
-                this[this.tableSken.VaranjeColumn] = global::System.Convert.DBNull;
+                this[this.tableScanReport.VaranjeColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1135,22 +1135,22 @@ namespace DLWMS.WinForms.Izvjestaji {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class SkenRowChangeEvent : global::System.EventArgs {
+        public class ScanReportRowChangeEvent : global::System.EventArgs {
             
-            private SkenRow eventRow;
+            private ScanReportRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SkenRowChangeEvent(SkenRow row, global::System.Data.DataRowAction action) {
+            public ScanReportRowChangeEvent(ScanReportRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public SkenRow Row {
+            public ScanReportRow Row {
                 get {
                     return this.eventRow;
                 }

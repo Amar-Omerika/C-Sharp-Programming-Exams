@@ -1,5 +1,4 @@
-﻿using cSharpIntroWinForms.Ispit190073;
-using cSharpIntroWinForms.P10;
+﻿using cSharpIntroWinForms.P10;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -29,7 +28,7 @@ namespace cSharpIntroWinForms.P9
         public DbSet<Spolovi> Spolovi { get; set; }
         public DbSet<Predmeti> Predmeti { get; set; }
         public DbSet<KorisniciPredmeti> KorisniciPredmeti { get; set; }
-        public DbSet<KorisniciPoruke190073> KorisniciPoruke { get; set; }
+        public DbSet<IspitIB190069.KorisniciPoruke> KorisniciPoruke { get; set; }
 
 
 

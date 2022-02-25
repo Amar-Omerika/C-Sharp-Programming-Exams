@@ -1,5 +1,5 @@
-﻿using DLWMS.WinForms.BrojIndeksa;
-using DLWMS.WinForms.Entiteti;
+﻿using DLWMS.WinForms.Entiteti;
+using DLWMS.WinForms.IspitIB190069;
 using System.Data.Entity;
 
 namespace DLWMS.WinForms.Helpers
@@ -14,8 +14,8 @@ namespace DLWMS.WinForms.Helpers
         public virtual DbSet<Spol> Spolovi { get; set; }
         public virtual DbSet<Predmet> Predmet { get; set; }
         public virtual DbSet<StudentiPredmeti> StudentiPredmeti { get; set; }
-        public virtual DbSet<StudentiIspitiScan> StudentiIspitiScan { get; set; }
         public virtual DbSet<Uloga> Uloge { get; set; }
+        public virtual DbSet<KorisniciIspitiScan> KorisniciIspitiScan { get; set; }
 
 
 

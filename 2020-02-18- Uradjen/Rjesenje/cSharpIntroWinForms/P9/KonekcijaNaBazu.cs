@@ -1,4 +1,4 @@
-﻿using cSharpIntroWinForms.IB190073;
+﻿using cSharpIntroWinForms.IspitIB190069;
 using cSharpIntroWinForms.P10;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using cSharpIntroWinForms.IB190073;
+﻿using cSharpIntroWinForms.IspitIB190069;
 using cSharpIntroWinForms.P10;
 using cSharpIntroWinForms.P8;
 using System;
@@ -28,7 +28,8 @@ namespace cSharpIntroWinForms
 
         public List<PolozeniPredmet> Polozeni { get; set; } = new List<PolozeniPredmet>();
         public virtual List<KorisniciPredmeti> Uspjeh { get; set; } = new List<KorisniciPredmeti>();
-        public virtual List<KorisniciSlike> SlikeKorisnika { get; set; } = new List<KorisniciSlike>();
+        //Ovu smo klasu dodali
+        public virtual List<KorisniciSlike> KorisniciSlike { get; set; } = new List<KorisniciSlike>();
 
 
         public override string ToString()

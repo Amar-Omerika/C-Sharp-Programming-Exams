@@ -1,4 +1,4 @@
-﻿using cSharpIntroWinForms.IB190073;
+﻿using cSharpIntroWinForms.IspitIB190069;
 using cSharpIntroWinForms.P9;
 using System;
 using System.Collections.Generic;
@@ -18,7 +18,7 @@ namespace cSharpIntroWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Glavna());
+            Application.Run(new frmGlavna());
         }
     }
 }

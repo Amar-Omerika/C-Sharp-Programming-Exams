@@ -1,4 +1,4 @@
-﻿using DLWMS.WinForms.BrojIndeksa;
+﻿using DLWMS.WinForms.IspitIB190069;
 using System;
 using System.Windows.Forms;
 
@@ -14,7 +14,7 @@ namespace DLWMS.WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form forma = new frmPretragaBrojIndeksa();
+            Form forma = new frmPretragaIB190069();
             Application.Run(forma);
         }
     }

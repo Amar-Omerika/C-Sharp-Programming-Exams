@@ -1,4 +1,5 @@
-﻿using cSharpIntroWinForms.P9;
+﻿using cSharpIntroWinForms.IspitIB190069;
+using cSharpIntroWinForms.P9;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace cSharpIntroWinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new KorisniciAdmin());
+            Application.Run(new frmKorisniciAdminIB190069());
         }
     }
 }

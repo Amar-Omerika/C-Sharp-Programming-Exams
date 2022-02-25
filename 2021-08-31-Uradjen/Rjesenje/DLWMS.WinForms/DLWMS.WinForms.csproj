@@ -85,26 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BrojIndeksa\frmNoviScanIspitaBrojIndeks.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BrojIndeksa\frmNoviScanIspitaBrojIndeks.Designer.cs">
-      <DependentUpon>frmNoviScanIspitaBrojIndeks.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BrojIndeksa\frmPretragaBrojIndeksa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BrojIndeksa\frmPretragaBrojIndeksa.Designer.cs">
-      <DependentUpon>frmPretragaBrojIndeksa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BrojIndeksa\frmScanIspitaBrojIndeksa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BrojIndeksa\frmScanIspitaBrojIndeksa.Designer.cs">
-      <DependentUpon>frmScanIspitaBrojIndeksa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BrojIndeksa\StudentiIspitiScan.cs" />
-    <Compile Include="BrojIndeksa\StudentiPolozeniStatistika.cs" />
     <Compile Include="frmGlavna.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +96,26 @@
     <Compile Include="Helpers\DLWMSdb.cs" />
     <Compile Include="Entiteti\StudentiPredmeti.cs" />
     <Compile Include="Entiteti\Uloge.cs" />
+    <Compile Include="IspitIB190069\frmNoviScanIspitaIB190069.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IspitIB190069\frmNoviScanIspitaIB190069.Designer.cs">
+      <DependentUpon>frmNoviScanIspitaIB190069.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IspitIB190069\frmPretragaIB190069.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IspitIB190069\frmPretragaIB190069.Designer.cs">
+      <DependentUpon>frmPretragaIB190069.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IspitIB190069\frmScanIspitaIB190069.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IspitIB190069\frmScanIspitaIB190069.Designer.cs">
+      <DependentUpon>frmScanIspitaIB190069.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IspitIB190069\KorisniciIspitiScan.cs" />
+    <Compile Include="IspitIB190069\MojaKlasa.cs" />
     <Compile Include="Izvjestaji\dsDLWMS.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,22 +166,22 @@
     <Compile Include="Entiteti\Spol.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BrojIndeksa\frmNoviScanIspitaBrojIndeks.resx">
-      <DependentUpon>frmNoviScanIspitaBrojIndeks.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BrojIndeksa\frmPretragaBrojIndeksa.resx">
-      <DependentUpon>frmPretragaBrojIndeksa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BrojIndeksa\frmScanIspitaBrojIndeksa.resx">
-      <DependentUpon>frmScanIspitaBrojIndeksa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmGlavna.resx">
       <DependentUpon>frmGlavna.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IspitIB190069\frmNoviScanIspitaIB190069.resx">
+      <DependentUpon>frmNoviScanIspitaIB190069.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IspitIB190069\frmPretragaIB190069.resx">
+      <DependentUpon>frmPretragaIB190069.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IspitIB190069\frmScanIspitaIB190069.resx">
+      <DependentUpon>frmScanIspitaIB190069.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IspitIB190069\rptScanReport.rdlc" />
     <EmbeddedResource Include="Izvjestaji\frmIzvjestaji.resx">
       <DependentUpon>frmIzvjestaji.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Izvjestaji\rptSkenovi.rdlc" />
     <EmbeddedResource Include="Izvjestaji\rptUvjerenjeOPolozenim.rdlc" />
     <EmbeddedResource Include="Forme\frmPrijava.resx">
       <DependentUpon>frmPrijava.cs</DependentUpon>

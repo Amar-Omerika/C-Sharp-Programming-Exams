@@ -22,7 +22,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Sken" msprop:Generator_TableClassName="SkenDataTable" msprop:Generator_TableVarName="tableSken" msprop:Generator_TablePropName="Sken" msprop:Generator_RowDeletingName="SkenRowDeleting" msprop:Generator_RowChangingName="SkenRowChanging" msprop:Generator_RowEvHandlerName="SkenRowChangeEventHandler" msprop:Generator_RowDeletedName="SkenRowDeleted" msprop:Generator_UserTableName="Sken" msprop:Generator_RowChangedName="SkenRowChanged" msprop:Generator_RowEvArgName="SkenRowChangeEvent" msprop:Generator_RowClassName="SkenRow">
+        <xs:element name="ScanReport" msprop:Generator_TableClassName="ScanReportDataTable" msprop:Generator_TableVarName="tableScanReport" msprop:Generator_TablePropName="ScanReport" msprop:Generator_RowDeletingName="ScanReportRowDeleting" msprop:Generator_RowChangingName="ScanReportRowChanging" msprop:Generator_RowEvHandlerName="ScanReportRowChangeEventHandler" msprop:Generator_RowDeletedName="ScanReportRowDeleted" msprop:Generator_UserTableName="ScanReport" msprop:Generator_RowChangedName="ScanReportRowChanged" msprop:Generator_RowEvArgName="ScanReportRowChangeEvent" msprop:Generator_RowClassName="ScanReportRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Predmet" msprop:Generator_ColumnVarNameInTable="columnPredmet" msprop:Generator_ColumnPropNameInRow="Predmet" msprop:Generator_ColumnPropNameInTable="PredmetColumn" msprop:Generator_UserColumnName="Predmet" type="xs:string" minOccurs="0" />

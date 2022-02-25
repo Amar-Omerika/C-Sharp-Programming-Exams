@@ -77,26 +77,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IB190073\dsKorisnici.Designer.cs">
+    <Compile Include="IspitIB190069\dtKorisnici.cs">
+      <DependentUpon>dtKorisnici.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IspitIB190069\dtKorisnici.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>dsKorisnici.xsd</DependentUpon>
+      <DependentUpon>dtKorisnici.xsd</DependentUpon>
     </Compile>
-    <Compile Include="IB190073\dtoKorisnik.cs" />
-    <Compile Include="IB190073\frmIzvjestaj.cs">
+    <Compile Include="IspitIB190069\frmKorisniciAdminIB190069.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IB190073\frmIzvjestaj.Designer.cs">
-      <DependentUpon>frmIzvjestaj.cs</DependentUpon>
+    <Compile Include="IspitIB190069\frmKorisniciAdminIB190069.Designer.cs">
+      <DependentUpon>frmKorisniciAdminIB190069.cs</DependentUpon>
     </Compile>
-    <Compile Include="IB190073\frmKorisniciSlikePregled.cs">
+    <Compile Include="IspitIB190069\frmKorisniciSlikePregled.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IB190073\frmKorisniciSlikePregled.Designer.cs">
+    <Compile Include="IspitIB190069\frmKorisniciSlikePregled.Designer.cs">
       <DependentUpon>frmKorisniciSlikePregled.cs</DependentUpon>
     </Compile>
-    <Compile Include="IB190073\KorisniciSlike.cs" />
-    <Compile Include="IB190073\Slika.cs" />
+    <Compile Include="IspitIB190069\frmPrintaj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IspitIB190069\frmPrintaj.Designer.cs">
+      <DependentUpon>frmPrintaj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IspitIB190069\KorisniciSlike.cs" />
     <Compile Include="P10\DLWMS.cs" />
     <Compile Include="P10\KorisniciPredmeti.cs" />
     <Compile Include="P10\MboxHelper.cs" />
@@ -135,13 +142,16 @@
     <Compile Include="P9\KonekcijaNaBazu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="IB190073\frmIzvjestaj.resx">
-      <DependentUpon>frmIzvjestaj.cs</DependentUpon>
+    <EmbeddedResource Include="IspitIB190069\frmKorisniciAdminIB190069.resx">
+      <DependentUpon>frmKorisniciAdminIB190069.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IB190073\frmKorisniciSlikePregled.resx">
+    <EmbeddedResource Include="IspitIB190069\frmKorisniciSlikePregled.resx">
       <DependentUpon>frmKorisniciSlikePregled.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IB190073\rptIzvjestajPolozenih.rdlc" />
+    <EmbeddedResource Include="IspitIB190069\frmPrintaj.resx">
+      <DependentUpon>frmPrintaj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IspitIB190069\rtpPrintaj.rdlc" />
     <EmbeddedResource Include="P6\KorisniciAdmin.resx">
       <DependentUpon>KorisniciAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,16 +177,16 @@
     <None Include="DLWMS.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="IB190073\dsKorisnici.xsc">
-      <DependentUpon>dsKorisnici.xsd</DependentUpon>
+    <None Include="IspitIB190069\dtKorisnici.xsc">
+      <DependentUpon>dtKorisnici.xsd</DependentUpon>
     </None>
-    <None Include="IB190073\dsKorisnici.xsd">
+    <None Include="IspitIB190069\dtKorisnici.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsKorisnici.Designer.cs</LastGenOutput>
+      <LastGenOutput>dtKorisnici.Designer.cs</LastGenOutput>
     </None>
-    <None Include="IB190073\dsKorisnici.xss">
-      <DependentUpon>dsKorisnici.xsd</DependentUpon>
+    <None Include="IspitIB190069\dtKorisnici.xss">
+      <DependentUpon>dtKorisnici.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\cSharpIntroWinForms.P8.KorisniciPolozeniPredmeti.datasource" />
@@ -203,8 +213,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\cSharp.ico" />
-    <Content Include="Slike\denis.jpg" />
-    <Content Include="Slike\Jasmin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

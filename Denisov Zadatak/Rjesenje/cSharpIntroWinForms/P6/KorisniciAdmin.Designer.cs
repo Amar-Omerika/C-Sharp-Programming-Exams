@@ -56,8 +56,9 @@
             this.dgvKorisnici.Location = new System.Drawing.Point(12, 41);
             this.dgvKorisnici.Name = "dgvKorisnici";
             this.dgvKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKorisnici.Size = new System.Drawing.Size(666, 247);
+            this.dgvKorisnici.Size = new System.Drawing.Size(666, 265);
             this.dgvKorisnici.TabIndex = 0;
+            this.dgvKorisnici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKorisnici_CellContentClick);
             // 
             // Ime
             // 
@@ -108,17 +109,17 @@
             // lblProsjek
             // 
             this.lblProsjek.AutoSize = true;
-            this.lblProsjek.Location = new System.Drawing.Point(28, 295);
+            this.lblProsjek.Location = new System.Drawing.Point(13, 313);
             this.lblProsjek.Name = "lblProsjek";
-            this.lblProsjek.Size = new System.Drawing.Size(35, 13);
+            this.lblProsjek.Size = new System.Drawing.Size(52, 13);
             this.lblProsjek.TabIndex = 3;
-            this.lblProsjek.Text = "label1";
+            this.lblProsjek.Text = "lblProsjek";
             // 
             // KorisniciAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 320);
+            this.ClientSize = new System.Drawing.Size(692, 337);
             this.Controls.Add(this.lblProsjek);
             this.Controls.Add(this.txtPretraga);
             this.Controls.Add(this.dgvKorisnici);
@@ -136,12 +137,12 @@
 
         private System.Windows.Forms.DataGridView dgvKorisnici;
         private System.Windows.Forms.TextBox txtPretraga;
-        private System.Windows.Forms.Label lblProsjek;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prezime;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spol;
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnickoIme;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Admin;
         private System.Windows.Forms.DataGridViewButtonColumn Polozeni;
+        private System.Windows.Forms.Label lblProsjek;
     }
 }

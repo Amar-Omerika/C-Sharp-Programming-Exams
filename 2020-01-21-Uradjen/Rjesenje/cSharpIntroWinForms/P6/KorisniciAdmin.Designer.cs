@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.dgvKorisnici = new System.Windows.Forms.DataGridView();
-            this.txtPretraga = new System.Windows.Forms.TextBox();
-            this.lblProsjek = new System.Windows.Forms.Label();
             this.Ime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Spol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KorisnickoIme = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Admin = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Polozeni = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnOcisti = new System.Windows.Forms.Button();
+            this.txtPretraga = new System.Windows.Forms.TextBox();
+            this.lblProsjek = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKorisnici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,24 +58,6 @@
             this.dgvKorisnici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKorisnici.Size = new System.Drawing.Size(666, 247);
             this.dgvKorisnici.TabIndex = 0;
-            this.dgvKorisnici.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKorisnici_CellContentClick);
-           
-            // txtPretraga
-            // 
-            this.txtPretraga.Location = new System.Drawing.Point(12, 15);
-            this.txtPretraga.Name = "txtPretraga";
-            this.txtPretraga.Size = new System.Drawing.Size(666, 20);
-            this.txtPretraga.TabIndex = 2;
-            this.txtPretraga.TextChanged += new System.EventHandler(this.txtPretraga_TextChanged);
-            // 
-            // lblProsjek
-            // 
-            this.lblProsjek.AutoSize = true;
-            this.lblProsjek.Location = new System.Drawing.Point(28, 295);
-            this.lblProsjek.Name = "lblProsjek";
-            this.lblProsjek.Size = new System.Drawing.Size(35, 13);
-            this.lblProsjek.TabIndex = 3;
-            this.lblProsjek.Text = "label1";
             // 
             // Ime
             // 
@@ -117,22 +98,27 @@
             this.Polozeni.Text = "Polozeni";
             this.Polozeni.UseColumnTextForButtonValue = true;
             // 
-            // btnOcisti
+            // txtPretraga
             // 
-            this.btnOcisti.Location = new System.Drawing.Point(538, 295);
-            this.btnOcisti.Name = "btnOcisti";
-            this.btnOcisti.Size = new System.Drawing.Size(131, 23);
-            this.btnOcisti.TabIndex = 4;
-            this.btnOcisti.Text = "Ocisti polozene";
-            this.btnOcisti.UseVisualStyleBackColor = true;
-            this.btnOcisti.Click += new System.EventHandler(this.btnOcisti_Click);
+            this.txtPretraga.Location = new System.Drawing.Point(12, 15);
+            this.txtPretraga.Name = "txtPretraga";
+            this.txtPretraga.Size = new System.Drawing.Size(666, 20);
+            this.txtPretraga.TabIndex = 2;
+            // 
+            // lblProsjek
+            // 
+            this.lblProsjek.AutoSize = true;
+            this.lblProsjek.Location = new System.Drawing.Point(28, 295);
+            this.lblProsjek.Name = "lblProsjek";
+            this.lblProsjek.Size = new System.Drawing.Size(35, 13);
+            this.lblProsjek.TabIndex = 3;
+            this.lblProsjek.Text = "label1";
             // 
             // KorisniciAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(692, 320);
-            this.Controls.Add(this.btnOcisti);
             this.Controls.Add(this.lblProsjek);
             this.Controls.Add(this.txtPretraga);
             this.Controls.Add(this.dgvKorisnici);
@@ -157,6 +143,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn KorisnickoIme;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Admin;
         private System.Windows.Forms.DataGridViewButtonColumn Polozeni;
-        private System.Windows.Forms.Button btnOcisti;
     }
 }

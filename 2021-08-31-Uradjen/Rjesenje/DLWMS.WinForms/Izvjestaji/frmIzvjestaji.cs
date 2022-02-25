@@ -1,4 +1,4 @@
-﻿using DLWMS.WinForms.BrojIndeksa;
+﻿using DLWMS.WinForms.IspitIB190069;
 using Microsoft.Reporting.WinForms;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -7,45 +7,45 @@ namespace DLWMS.WinForms.Izvjestaji
 {
     public partial class frmIzvjestaji : Form
     {
-        private List<StudentiIspitiScan> skenovi;
+        List<KorisniciIspitiScan> _scan;
 
         public frmIzvjestaji()
         {
             InitializeComponent();
         }
 
-        public frmIzvjestaji(List<StudentiIspitiScan> skenovi) : this()
+        public frmIzvjestaji(List<KorisniciIspitiScan> scan) : this()
         {
-            this.skenovi = skenovi;
+            this._scan = scan;
+        }
+
+
+        private void reportViewer1_Load(object sender, System.EventArgs e)
+        {
+           
         }
 
         private void frmIzvjestaji_Load(object sender, System.EventArgs e)
         {
-
             var rpc = new ReportParameterCollection();
             var rds = new ReportDataSource();
 
-            var tblSken = new dsDLWMS.SkenDataTable();
-            for (int i = 0; i < skenovi.Count; i++)
+            var tblSken = new dsDLWMS.ScanReportDataTable();
+            for (int i = 0; i < _scan.Count; i++)
             {
-                var red = tblSken.NewSkenRow();
-                red.Predmet = skenovi[i].Predmet.ToString();
-                red.Napomena = skenovi[i].Napomena;
-                red.Varanje = skenovi[i].Varanje == true ? "Da" : "Ne";
+                var red = tblSken.NewScanReportRow();
+                red.Predmet = _scan[i].Predmet.ToString();
+                red.Napomena = _scan[i].Napomena;
+                red.Varanje = _scan[i].Varanje == true ? "Da" : "Ne";
                 tblSken.Rows.Add(red);
             }
 
-            rds.Name = "dsSken";
+            rds.Name = "noviReport";
             rds.Value = tblSken;
 
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.LocalReport.SetParameters(rpc);
             this.reportViewer1.RefreshReport();
-        }
-
-        private void reportViewer1_Load(object sender, System.EventArgs e)
-        {
-
         }
     }
 }
